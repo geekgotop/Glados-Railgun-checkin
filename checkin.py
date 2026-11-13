@@ -767,7 +767,7 @@ class API:
                 raise_on_status=False,
             )
 
-        self.headers = {"origin": f"https://{domain}", "user-agent": self.user_agent or PLATFORM_UA["Windows"]}
+        self.headers = {"origin": f"https://{domain}", "user-agent": self.user_agent or PLATFORM_UA["macOS"]}
         self.session = requests.Session()
         self.session.headers.update(self.headers)
         adapter = HTTPAdapter(max_retries=retry)
